@@ -1,21 +1,39 @@
-<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Our Wedding — Final Prototype</title>
+<!doctype html><html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><title>Our Wedding Planner</title>
 <style>
-:root{--ink:#174f4b;--ink2:#123f3c;--mint:#e6f3ef;--gold:#b78a35;--paper:#fffdf8;--line:#d8e1dd;--muted:#687875;--white:#fff;--shadow:0 8px 28px rgba(20,75,70,.08)}*{box-sizing:border-box}body{margin:0;background:var(--paper);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#263936;font-size:18px}.top{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.97);border-bottom:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;gap:12px}.brand{font-weight:900;color:var(--ink);font-size:22px;flex:1}.tabs{display:flex;gap:8px}.tab{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:12px 20px;font-weight:800;font-size:17px}.tab.active{background:var(--ink);color:#fff}.wrap{max-width:720px;margin:auto;padding:28px 20px 110px}.eyebrow{color:var(--gold);font-weight:900;letter-spacing:.13em;text-transform:uppercase;font-size:15px}.hero{font-size:42px;line-height:1.02;color:var(--ink);margin:8px 0 4px;font-weight:950}.subhero{font-size:27px;color:var(--ink);font-weight:800;margin:0 0 26px}.h1{font-size:34px;line-height:1.1;color:var(--ink);font-weight:900;margin:8px 0 14px}.h2{font-size:23px;color:var(--ink);font-weight:850;margin:18px 0 8px}.lead{font-size:20px;line-height:1.45;color:#4d615e}.small{font-size:15px;color:var(--muted)}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;margin:14px 0;box-shadow:var(--shadow)}button.card{width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer}.card strong{display:block;color:var(--ink);font-size:20px;margin-bottom:5px}.choice{width:100%;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:9px 0;text-align:left;font:inherit;color:#263936;cursor:pointer}.choice.selected{background:var(--mint);border:3px solid var(--ink);padding:16px 18px}.choice .tag{float:right;font-size:13px;font-weight:900;color:var(--ink)}.primary,.secondary,.back{width:100%;border-radius:20px;padding:17px 18px;margin:12px 0;font-size:17px;font-weight:900;cursor:pointer}.primary{background:var(--ink);color:#fff;border:2px solid var(--ink)}.secondary{background:var(--mint);color:var(--ink);border:2px solid transparent}.back{background:#fff;color:var(--ink);border:1px solid var(--line)}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{width:100%;padding:16px;border:1px solid #cbd8d4;border-radius:15px;font:inherit;margin:7px 0 14px;background:#fff}.label{font-weight:800;color:var(--ink);display:block;margin-top:12px}.notice{border-left:5px solid var(--gold);background:#f7faf8;padding:16px;border-radius:12px;margin:18px 0;color:#526562}.photo{height:250px;border:2px dashed #cbd8d4;border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#fff;margin:18px 0;cursor:pointer}.photo img{width:100%;height:100%;object-fit:cover}.summary{border-left:4px solid var(--mint);padding:8px 0 8px 16px;margin:12px 0}.summary b{color:var(--ink)}.pill{display:inline-block;background:var(--mint);color:var(--ink);font-weight:800;border-radius:999px;padding:7px 11px;margin:4px 4px 4px 0;font-size:14px}.statusbar{background:#f7faf8;border-radius:16px;padding:13px 15px;margin:12px 0;color:var(--ink);font-weight:750}.bottom-note{text-align:center;color:var(--muted);font-size:14px;margin-top:22px}.hidden{display:none}@media(max-width:480px){.wrap{padding:24px 18px 105px}.hero{font-size:39px}.h1{font-size:31px}.tab{padding:11px 16px}.row{grid-template-columns:1fr}}
-</style></head><body><header class="top"><div class="brand">OUR WEDDING 💚</div><div class="tabs" id="tabs"><button class="tab" data-mode="dream">Dream</button><button class="tab" data-mode="plan">Plan</button></div></header><main class="wrap" id="app"></main><input id="photoInput" type="file" accept="image/*" class="hidden">
+:root{--ink:#174f4b;--ink2:#123f3c;--mint:#e6f3ef;--gold:#b78a35;--paper:#fffdf8;--line:#d8e1dd;--muted:#687875;--white:#fff;--shadow:0 8px 28px rgba(20,75,70,.08)}*{box-sizing:border-box}body{margin:0;background:var(--paper);font-family:system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;color:#263936;font-size:18px}.top{position:sticky;top:0;z-index:10;background:rgba(255,253,248,.97);border-bottom:1px solid var(--line);padding:14px 18px;display:flex;align-items:center;gap:12px}.brand{font-weight:900;color:var(--ink);font-size:22px;flex:1}.tabs{display:flex;gap:8px}.tab{border:1px solid var(--line);background:#fff;color:var(--ink);border-radius:999px;padding:12px 20px;font-weight:800;font-size:17px}.tab.active{background:var(--ink);color:#fff}.wrap{max-width:720px;margin:auto;padding:28px 20px 110px}.eyebrow{color:var(--gold);font-weight:900;letter-spacing:.13em;text-transform:uppercase;font-size:15px}.hero{font-size:42px;line-height:1.02;color:var(--ink);margin:8px 0 4px;font-weight:950}.subhero{font-size:27px;color:var(--ink);font-weight:800;margin:0 0 26px}.h1{font-size:34px;line-height:1.1;color:var(--ink);font-weight:900;margin:8px 0 14px}.h2{font-size:23px;color:var(--ink);font-weight:850;margin:18px 0 8px}.lead{font-size:20px;line-height:1.45;color:#4d615e}.small{font-size:15px;color:var(--muted)}.card{background:#fff;border:1px solid var(--line);border-radius:24px;padding:22px;margin:14px 0;box-shadow:var(--shadow)}button.card{width:100%;text-align:left;color:inherit;font:inherit;cursor:pointer}.card strong{display:block;color:var(--ink);font-size:20px;margin-bottom:5px}.choice{width:100%;background:#fff;border:1px solid var(--line);border-radius:20px;padding:18px 20px;margin:9px 0;text-align:left;font:inherit;color:#263936;cursor:pointer}.choice.selected{background:var(--mint);border:3px solid var(--ink);padding:16px 18px}.choice .tag{float:right;font-size:13px;font-weight:900;color:var(--ink)}.primary,.secondary,.back{width:100%;border-radius:20px;padding:17px 18px;margin:12px 0;font-size:17px;font-weight:900;cursor:pointer}.primary{background:var(--ink);color:#fff;border:2px solid var(--ink)}.secondary{background:var(--mint);color:var(--ink);border:2px solid transparent}.back{background:#fff;color:var(--ink);border:1px solid var(--line)}.row{display:grid;grid-template-columns:1fr 1fr;gap:10px}.field{width:100%;padding:16px;border:1px solid #cbd8d4;border-radius:15px;font:inherit;margin:7px 0 14px;background:#fff}.label{font-weight:800;color:var(--ink);display:block;margin-top:12px}.notice{border-left:5px solid var(--gold);background:#f7faf8;padding:16px;border-radius:12px;margin:18px 0;color:#526562}.photo{height:250px;border:2px dashed #cbd8d4;border-radius:24px;display:flex;align-items:center;justify-content:center;text-align:center;overflow:hidden;background:#fff;margin:18px 0;cursor:pointer}.photo img{width:100%;height:100%;object-fit:cover}.summary{border-left:4px solid var(--mint);padding:8px 0 8px 16px;margin:12px 0}.summary b{color:var(--ink)}.pill{display:inline-block;background:var(--mint);color:var(--ink);font-weight:800;border-radius:999px;padding:7px 11px;margin:4px 4px 4px 0;font-size:14px}.statusbar{background:#f7faf8;border-radius:16px;padding:13px 15px;margin:12px 0;color:var(--ink);font-weight:750}.done-card{background:var(--mint);border:2px solid var(--ink)}.done-card .step-state{font-weight:900;color:var(--ink)}.bottom-note{text-align:center;color:var(--muted);font-size:14px;margin-top:22px}.hidden{display:none}@media(max-width:480px){.wrap{padding:24px 18px 105px}.hero{font-size:39px}.h1{font-size:31px}.tab{padding:11px 16px}.row{grid-template-columns:1fr}}
+</style></head><body><header class="top"><div class="brand">OUR WEDDING 💚</div><div class="tabs" id="tabs"><button class="tab" data-mode="home">Home</button><button class="tab" data-mode="dream">Dream</button><button class="tab" data-mode="plan">Plan</button></div></header><main class="wrap" id="app"></main><input id="photoInput" type="file" accept="image/*" class="hidden">
 <script>
 'use strict';
 const KEY='ourWeddingFinalV1';
-const fresh=()=>({onboard:false,people:{a:'',alabel:'Bride',b:'',blabel:'Partner'},date:'',dateUnknown:false,dateIdea:'',area:'',areaUnknown:false,size:'',budget:'',budgetUnknown:false,photo:'',mode:'landing',route:'welcome',lastDream:'dreamHome',lastPlan:'planHome',history:[],guestEstimate:'',dream:{},considering:{},chosen:{},mix:{},explore:{},events:{},plan:{money:{planned:'',committed:'',paid:'',outstanding:'',upcoming:''},handling:{}}});
+const fresh=()=>({onboard:false,people:{a:'',alabel:'Bride',acustom:'',b:'',blabel:'Partner',bcustom:''},date:'',dateUnknown:false,dateIdea:'',area:'',areaUnknown:false,size:'',budget:'',budgetUnknown:false,photo:'',mode:'landing',route:'welcome',lastDream:'dreamHome',lastPlan:'planHome',lastHome:'plannerHome',history:[],guestEstimate:'',dream:{},considering:{},chosen:{},mix:{},explore:{},events:{},plan:{money:{planned:'',committed:'',paid:'',outstanding:'',upcoming:''},handling:{}}});
 let state;try{state=Object.assign(fresh(),JSON.parse(localStorage.getItem(KEY)||'{}'))}catch(e){state=fresh()}
-function save(){localStorage.setItem(KEY,JSON.stringify(state))}
+function save(){
+  try{
+    localStorage.setItem(KEY,JSON.stringify(state));
+  }catch(e){
+    // Some phone file viewers block localStorage for local HTML files.
+    // Keep the planner interactive even when persistent browser storage is unavailable.
+  }
+}
 const $=s=>document.querySelector(s); const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 function title(t,sub='',eye=''){return `${eye?`<div class="eyebrow">${eye}</div>`:''}<div class="h1">${t}</div>${sub?`<div class="lead">${sub}</div>`:''}`}
 function btn(label,action,kind='primary'){return `<button class="${kind}" data-action="${action}">${label}</button>`}
 function back(){return state.history.length?btn('← BACK','back','back'):''}
 function choice(label,key,selected=false,multi=false){return `<button class="choice ${selected?'selected':''}" data-choice="${esc(key)}" aria-pressed="${selected}">${esc(label)}${selected?`<span class="tag">${multi?'SELECTED':'✓'}</span>`:''}</button>`}
 function card(label,desc,route){return `<button class="card" data-route="${route}"><strong>${label}</strong>${desc?`<span>${desc}</span>`:''}</button>`}
-function go(route,{push=true,mode=null}={}){if(push&&state.route!==route)state.history.push({route:state.route,mode:state.mode});state.route=route;if(mode)state.mode=mode;if(state.mode==='dream')state.lastDream=route;if(state.mode==='plan')state.lastPlan=route;save();render()}
-function switchMode(mode){if(state.mode===mode){go(mode==='dream'?'dreamHome':'planHome',{push:true,mode});return}if(state.mode==='dream')state.lastDream=state.route;if(state.mode==='plan')state.lastPlan=state.route;state.history=[];state.mode=mode;go(mode==='dream'?(state.lastDream||'dreamHome'):(state.lastPlan||'planHome'),{push:false,mode})}
+function go(route,{push=true,mode=null}={}){if(push&&state.route!==route)state.history.push({route:state.route,mode:state.mode});state.route=route;if(mode)state.mode=mode;if(state.mode==='dream')state.lastDream=route;if(state.mode==='plan')state.lastPlan=route;if(state.mode==='home')state.lastHome=route;save();render()}
+function switchMode(mode){
+ if(mode==='home'){
+  if(state.mode==='dream')state.lastDream=state.route;
+  if(state.mode==='plan')state.lastPlan=state.route;
+  state.history=[];state.mode='home';return go('plannerHome',{push:false,mode:'home'});
+ }
+ if(state.mode===mode){go(mode==='dream'?'dreamHome':'planHome',{push:true,mode});return}
+ if(state.mode==='dream')state.lastDream=state.route;
+ if(state.mode==='plan')state.lastPlan=state.route;
+ state.history=[];state.mode=mode;
+ go(mode==='dream'?(state.lastDream||'dreamHome'):(state.lastPlan||'planHome'),{push:false,mode})
+}
 function doBack(){const p=state.history.pop();if(p){state.route=p.route;state.mode=p.mode;save();render()}}
 const dreamSteps=['ceremonyLocation','timeOfDay','ceremonyFeel','ceremonySurroundings','gettingReady','attire','firstLook','entrance','ceremonyContents','celebration'];
 const options={
@@ -35,17 +53,18 @@ const uncertain=s=>/don’t know|don't know|not sure|haven’t pictured|haven't 
 const play=s=>/play|explore/i.test(s);
 function onboarding(route){
  if(route==='welcome')return `<div class="eyebrow">OUR WEDDING</div><div class="hero">I SAID YES!</div><div class="subhero">...now what?</div><div class="lead">You don’t have to know everything yet.<br>Let’s start with your wedding. 💚</div>${btn('MAKE IT OURS →','nextPeople')}`;
- if(route==='people')return `${title('First things first…','Who is getting married?')}<label class="label">Your name</label><input class="field" id="a" value="${esc(state.people.a)}"><label class="label">What would you like us to call you?</label><select class="field" id="alabel">${['Bride','Groom','Spouse','Partner','Custom'].map(x=>`<option ${state.people.alabel===x?'selected':''}>${x}</option>`).join('')}</select><label class="label">Who are you marrying?</label><input class="field" id="b" value="${esc(state.people.b)}"><label class="label">What would you like us to call them?</label><select class="field" id="blabel">${['Bride','Groom','Spouse','Partner','Custom'].map(x=>`<option ${state.people.blabel===x?'selected':''}>${x}</option>`).join('')}</select>${btn('CONTINUE','savePeople')}${back()}`;
+ if(route==='people')return `${title('First things first…','Who is getting married?')}<label class="label">Your name</label><input class="field" id="a" value="${esc(state.people.a)}"><label class="label">What would you like us to call you?</label><select class="field" id="alabel">${['Bride','Groom','Spouse','Partner','Custom'].map(x=>`<option ${state.people.alabel===x?'selected':''}>${x}</option>`).join('')}</select><input class="field ${state.people.alabel==='Custom'?'':'hidden'}" id="acustom" placeholder="Your custom title" value="${esc(state.people.acustom||'')}"><label class="label">Who are you marrying?</label><input class="field" id="b" value="${esc(state.people.b)}"><label class="label">What would you like us to call them?</label><select class="field" id="blabel">${['Bride','Groom','Spouse','Partner','Custom'].map(x=>`<option ${state.people.blabel===x?'selected':''}>${x}</option>`).join('')}</select><input class="field ${state.people.blabel==='Custom'?'':'hidden'}" id="bcustom" placeholder="Their custom title" value="${esc(state.people.bcustom||'')}">${btn('CONTINUE','savePeople')}${back()}`;
  if(route==='date')return `${title('When’s the big day? 💚')}<label class="label">Wedding date</label><input class="field" type="date" id="date" value="${esc(state.date)}"><label><input type="checkbox" id="dateUnknown" ${state.dateUnknown?'checked':''}> We’re still deciding</label><label class="label">General idea, if you have one</label><input class="field" id="dateIdea" placeholder="Season / month / year / not yet" value="${esc(state.dateIdea)}"><div class="small">Whatever you know right now is enough. You can change it anytime.</div>${btn('CONTINUE','saveDate')}${back()}`;
  if(route==='area')return `${title('Where are you imagining your wedding?')}<label class="label">City / Area</label><input class="field" id="area" value="${esc(state.area)}"><label><input type="checkbox" id="areaUnknown" ${state.areaUnknown?'checked':''}> We’re still deciding</label><div class="small">An approximate location is perfect. We just need a starting point.</div>${btn('CONTINUE','saveArea')}${back()}`;
  if(route==='size')return `${title('When you picture your wedding, how big does it feel?')}<div data-group="size">${['Small & intimate','Somewhere in the middle','A big celebration','I’m not sure yet'].map(x=>choice(x,x,state.size===x)).join('')}</div><div class="small">You can change your mind anytime.</div>${btn('CONTINUE','saveSize')}${back()}`;
  if(route==='budget')return `${title('What are you comfortable planning to spend?')}<label class="label">Wedding budget</label><input class="field" id="budget" inputmode="numeric" placeholder="$" value="${esc(state.budget)}"><label><input type="checkbox" id="budgetUnknown" ${state.budgetUnknown?'checked':''}> We don’t know yet</label><div class="notice">Whatever your number, we’ll help you plan the wedding you want to experience. 💚</div>${btn('CONTINUE','saveBudget')}${back()}`;
  if(route==='onboardDone')return `${title('Look at you. You’re planning a wedding. 💚','That’s enough for now. We’ll ask for other details when they actually become useful. You don’t need to figure everything out today.')}${btn('SEE OUR WEDDING →','finishOnboard')}${back()}`;
 }
-function landing(){let countdown='';if(state.date&&!state.dateUnknown){const d=new Date(state.date+'T12:00:00'),now=new Date();const days=Math.ceil((d-now)/(86400000));countdown=days>=0?`<div class="eyebrow">${days} DAYS UNTIL WE GET MARRIED</div>`:`<div class="eyebrow">YOU DID IT! 💚</div>`}const names=[state.people.a,state.people.b].filter(Boolean).join(' & ')||'Our Wedding';return `${title('I SAID YES!','...now what?')}<div class="lead">You don’t have to know everything yet. Let’s start with your wedding. 💚</div><div class="photo" id="photoBox">${state.photo?`<img src="${state.photo}" alt="Wedding inspiration photo">`:'+ Add a photo that makes this feel like your wedding 💚'}</div>${countdown}<div class="h1">${esc(names)}</div>${state.date&&!state.dateUnknown?`<div class="lead">${new Date(state.date+'T12:00:00').toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'})}</div>`:''}${btn('DREAM OUR WEDDING →','enterDream')}${btn('PLAN OUR WEDDING →','enterPlan','secondary')}<div class="bottom-note">We’ll hold the details so you can experience your wedding.</div><div class="card" style="margin-top:28px"><strong>Using an iPhone or iPad?</strong><p style="margin:8px 0 10px">If you use the Planner here on the website, you can open it normally in your browser.</p><p style="margin:8px 0 10px">If you download the Planner as an HTML file to use or keep on your device, Apple users may need an HTML viewer for the interactive buttons and features to work correctly.</p><strong style="font-size:17px;margin-top:14px">For a downloaded Planner file:</strong><ol style="line-height:1.55;padding-left:24px;margin-bottom:8px"><li>Save the Planner HTML file to <b>Files</b>.</li><li>Install <b>HTML Viewer Q</b> from the App Store.</li><li>Find the saved Planner file in Files.</li><li>Tap <b>Share</b>.</li><li>Choose <b>HTML Viewer Q</b> / <b>Open in HTML Viewer Q</b>.</li><li>Use the Planner there so its interactive features work correctly.</li></ol><p class="small">Keep a backup copy of your Planner file somewhere safe, such as Google Drive.</p></div>`}
+function landing(){let countdown='';if(state.date&&!state.dateUnknown){const d=new Date(state.date+'T12:00:00'),now=new Date();const days=Math.ceil((d-now)/(86400000));countdown=days>=0?`<div class="eyebrow">${days} DAYS UNTIL WE GET MARRIED</div>`:`<div class="eyebrow">YOU DID IT! 💚</div>`}const names=[state.people.a,state.people.b].filter(Boolean).join(' & ')||'Our Wedding';return `${title('I SAID YES!','...now what?')}<div class="lead">You don’t have to know everything yet. Let’s start with your wedding. 💚</div><div class="photo" id="photoBox">${state.photo?`<img src="${state.photo}" alt="Wedding inspiration photo">`:'+ Add a photo that makes this feel like your wedding 💚'}</div>${countdown}<div class="h1">${esc(names)}</div>${state.date&&!state.dateUnknown?`<div class="lead">${new Date(state.date+'T12:00:00').toLocaleDateString(undefined,{month:'long',day:'numeric',year:'numeric'})}</div>`:''}${btn('ENTER OUR WEDDING PLANNER →','enterHome')}${btn('USE OUR WEDDING GUIDE →','guideInfo','secondary')}<div class="bottom-note">We’ll hold the details so you can experience your wedding.</div>`}
+function guideInfo(){return `${title('Our Wedding Guide','The Guide teaches. The Planner tracks.','GUIDE + PLANNER')}<div class="card"><strong>Use the Guide when you need context.</strong><span>Open your copy of <em>Our Wedding Guide</em> whenever you want explanations, questions to ask, or help understanding a decision. Then come right back here to record what you’re considering or what you’ve decided.</span></div><div class="notice">Your planner does not duplicate or pretend to open the book. Your Guide is the copy that came with your purchase.</div><button class="secondary" data-mode="home">BACK TO PLANNER HOME →</button>${back()}`}
 function dreamHome(){return `${title('Let’s picture your wedding. 💚','Explore anything you want. Looking is not deciding, and you can move between Dream and Plan whenever you want.')} ${card('Our Wedding Day','Picture the moment you get married and the celebration around it.','ceremonyLocation')}${card('Before the Wedding','Engagements, showers, celebrations, rehearsals, welcome gatherings, or your own thing.','beforeHome')}${card('After the Wedding','After-parties, brunches, honeymoons, mini-moons, staycations, or your own thing.','afterHome')}`}
 function commitBlock(key,val){if(!val||uncertain(val)||play(val)||val==='A mix of these')return '';const c=state.considering[key]===val, ch=state.chosen[key]===val;return `<div class="row">${btn(c?'CONSIDERING ✓':'CONSIDERING',`consider:${key}`,'secondary')}${btn(ch?'YEP, THIS 💚 ✓':'YEP, THIS 💚',`choose:${key}`)}</div>`}
-function standardDream(key){const [eye,h,sub]=labels[key];const isMulti=multiKeys.has(key);const vals=isMulti?(state.dream[key]||[]):state.dream[key];let body=options[key].map(o=>choice(o,o,isMulti?vals.includes(o):vals===o,isMulti)).join('');let guide=key==='ceremonyLocation'?`<div class="notice">Not sure what your options are? Your Wedding Guide explains different ceremony locations and what becomes useful to know with each.</div>${btn('EXPLORE CEREMONY LOCATIONS IN OUR GUIDE →','guidePlaceholder','secondary')}`:'';let commit=!isMulti?commitBlock(key,vals):'';return `${title(h,sub,eye)}${body}${guide}${commit}${btn(key==='celebration'?'SEE THE DREAM MENU →':'KEEP IMAGINING OUR WEDDING →',`advance:${key}`)}${back()}`}
+function standardDream(key){const [eye,h,sub]=labels[key];const isMulti=multiKeys.has(key);const vals=isMulti?(state.dream[key]||[]):state.dream[key];let body=options[key].map(o=>choice(o,o,isMulti?vals.includes(o):vals===o,isMulti)).join('');let guide=key==='ceremonyLocation'?`<div class="notice">Not sure what your options are? Your Wedding Guide explains different ceremony locations and what becomes useful to know with each.</div>${btn('EXPLORE CEREMONY LOCATIONS IN OUR GUIDE →','guideInfo','secondary')}`:'';let commit=!isMulti?commitBlock(key,vals):'';return `${title(h,sub,eye)}${body}${guide}${commit}${btn(key==='celebration'?'SEE THE DREAM MENU →':'KEEP IMAGINING OUR WEDDING →',`advance:${key}`)}${back()}`}
 function playScreen(topic){const plays={ceremonySurroundings:['Flowers everywhere','Mostly greenery','Candlelight','An architectural frame','A dramatic view','A room that needs almost nothing','Personal details tucked in'],gettingReady:['A quiet morning','A room full of people I love','Music playing','Matching pajamas / getting-ready clothes','Coffee or breakfast together','A private moment before everything starts','Getting ready with my partner'],attire:['Gown / dress','Suit / tux','Jumpsuit','Separates','Cultural / traditional attire','Something unconventional','More than one look','Accessories that feel like me'],firstLook:['Private first look','First touch','Read letters without seeing each other','Spend the morning together','Wait for the ceremony','Do something completely our own'],entrance:['Walk the aisle alone','Walk with someone important','Walk with more than one person','Enter together','Meet partway','Already be there','Something unexpected'],celebration:['Big dance floor','Long dinner','Cocktail-party energy','Backyard-style hangout','Tiny candlelit dinner','Live music','Games / entertainment','Just us disappearing together'],ceremonyContents:['Personal vows','Traditional vows','A meaningful reading','Live music','A family or cultural tradition','A symbolic ritual','A private moment']};const arr=plays[topic]||['Something personal','Something simple','Something unexpected','A mix of ideas'];const vals=state.explore[topic]||[];return `${title('Let’s play with this. 💚','Tap anything that makes you curious. This is exploring — nothing here becomes a task.','DREAM')}${arr.map(x=>choice(x,x,vals.includes(x),true)).join('')}${btn('KEEP THESE IDEAS & GO BACK →',`playDone:${topic}`)}${back()}`}
 function mixScreen(topic){const base=options[topic].filter(x=>x!=='A mix of these'&&!uncertain(x)&&!play(x));const vals=state.mix[topic]?.selected||[];return `${title('What belongs in your mix? 💚','Choose as many as you want. We’ll walk through each one you select.','A MIX')}${base.map(x=>choice(x,x,vals.includes(x),true)).join('')}${btn('SHOW ME EACH ONE →',`mixStart:${topic}`)}${back()}`}
 function mixDetail(topic){const m=state.mix[topic]||{selected:[],index:0};const item=m.selected[m.index];if(!item)return `${title('Choose at least one thing for your mix.','Go back and tap the pieces you want to explore.')}${back()}`;const ideas={
@@ -56,14 +75,273 @@ const afterEvents=[['afterparty','After-party'],['farewell','Farewell breakfast 
 function eventHome(which){const arr=which==='before'?beforeEvents:afterEvents;return `${title(which==='before'?'What happens before the wedding? 💚':'What happens after the wedding? 💚','Explore anything that sounds like your wedding. Having an event does not mean you have to be the one planning it.',which==='before'?'BEFORE THE WEDDING':'AFTER THE WEDDING')}${arr.map(([id,n])=>card(n,'Tap to explore without assuming you’re responsible for planning it.',`event:${id}`)).join('')}${back()}`}
 function eventScreen(id){const all=[...beforeEvents,...afterEvents];const name=(all.find(x=>x[0]===id)||[])[1]||'Our event';if(id==='staycation')return staycation();const e=state.events[id]||{};const ownOpts=['We’re planning it','We’re planning it with someone','Someone else is planning it','We know we’re having it, but details are still fuzzy','We’re just thinking about it','Not interested'];const helpOpts=['When','Where','Who’s invited','Food & drinks','What we’ll do','Look & feel','What we need to bring / wear','Other','Pretty much handled'];return `${title(name,'First: where does this fit for you?','EXPLORE')}<div class="h2">Are we having this?</div>${ownOpts.map(x=>choice(x,x,e.owner===x)).join('')}${e.owner&&e.owner!=='Not interested'&&!/thinking|fuzzy/i.test(e.owner)?`<div class="h2">What do we actually need help with?</div>${helpOpts.map(x=>choice(x,x,(e.help||[]).includes(x),true)).join('')}`:''}${e.owner==='Someone else is planning it'?`<div class="notice">We’ll only hold the pieces that matter to you. Unknown host details will not become your tasks.</div>`:''}${btn('SAVE & RETURN →',`eventDone:${id}`)}${back()}`}
 function staycation(){const e=state.events.staycation||{};const ideas=['A beautiful local hotel','A home retreat','Fancy dinners / date nights','Spa time','Be tourists in our own city','Day trips','Order in and disappear','Movies, games, books & nowhere to be','Surprises for each other','A mix of home and going out','Something completely ours'];return `${title('Romantic staycation 💚','An intentional celebration. Not a consolation prize.','AFTER THE WEDDING')}<div class="lead">What sounds deliciously like the two of you?</div>${ideas.map(x=>choice(x,x,(e.help||[]).includes(x),true)).join('')}${btn('SAVE THESE IDEAS →','eventDone:staycation')}${back()}`}
-function planHome(){const g=state.guestEstimate?`${state.guestEstimate} guests — best guess saved`:'Start with a best guess when you’re ready.';const chosen=Object.entries(state.chosen).filter(([,v])=>v).map(([k,v])=>`<span class="pill">${esc(v)}</span>`).join('');return `${title('Ready to make some of it real? 💚','We’ll use everything you’ve already told us. You’ll only see the decisions and next steps that actually belong to your wedding.')} ${chosen?`<div class="card"><strong>Already coming with you from Dream</strong>${chosen}</div>`:''}${card('Guests',g,'planGuests')}${card('Invitations + Paper','Choose → order → receive → address → send.','planInvites')}${card('Money','Planned, committed, paid, outstanding, and what’s still uncommitted.','planMoney')}${card('Vendors','Only the vendors your wedding actually needs.','planVendors')}${card('Stuff + Orders','Buy, hire, DIY, borrow, delegate, already handled, or skip.','planStuff')}${card('Gifts','Keep gifts received and gifts you choose to give organized.','planGifts')}${card('Events','Only the celebrations that belong to your wedding.','planEvents')}${card('Honeymoon','Manage the trip or staycation you choose.','planHoneymoon')}${card('Wedding Day','Turn your chosen wedding into the people, timing, and things that make it happen.','planWeddingDay')}`}
-function planGuests(){return `${title('Guests','A best guess is enough right now. We’ll ask for precision only when something actually needs it.','PLAN')}<label class="label">About how many people might be there?</label><input class="field" id="guestEstimate" inputmode="numeric" placeholder="Best guess" value="${esc(state.guestEstimate)}">${btn('SAVE GUEST ESTIMATE →','saveGuests')}${state.guestEstimate?`<div class="statusbar">Saved: about ${esc(state.guestEstimate)} guests. This now appears on Plan Home.</div>`:''}${back()}`}
-function planModule(id){const data={planInvites:['Invitations + Paper','Paper or digital — the system follows what you choose.','Choose / design','Order or prepare','Receive / proof','Address / fill out','Mail / send'],planVendors:['Vendors','Only the vendors your wedding needs. Questions to ask vendors live in the Guide.','Choose vendor type','Compare / choose','Contract','Deposit','Final balance'],planStuff:['Stuff + Orders','Different ways of getting something create different next steps.','Buy','Hire','DIY','Borrow','Delegate','Already Handled','Skip'],planGifts:['Gifts','Record what you receive and only the gifts you actually choose to give.','Gift received','Thank-you needed','Thank-you sent','Gift we want to give'],planEvents:['Events','Your Before and After choices come here when they become real.','Before the Wedding','After the Wedding','Custom event'],planHoneymoon:['Honeymoon','Manage the honeymoon, mini-moon, or staycation you choose.','Where','When','Budget','Travel / lodging','Reservations','What’s left'],planWeddingDay:['Wedding Day','The details underneath your chosen wedding, without asking you to decide the same thing twice.','Timeline','People & responsibilities','Things to bring','Transportation / setup','End-of-night plan']};const [h,sub,...items]=data[id];return `${title(h,sub,'PLAN')}${items.map(x=>`<div class="card"><strong>${x}</strong><span>Representative planning path demonstrated.</span></div>`).join('')}${back()}`}
-function planMoney(){const m=state.plan.money||{};return `${title('Money','Budget intelligence is built into the same wedding system — it is not a separate “budget wedding” edition.','PLAN')} ${['planned','committed','paid','outstanding','upcoming'].map(k=>`<label class="label">${k[0].toUpperCase()+k.slice(1)}</label><input class="field money" data-money="${k}" inputmode="decimal" value="${esc(m[k]||'')}">`).join('')}<div class="statusbar">Uncommitted: <span id="uncommitted">—</span></div>${btn('SAVE MONEY SNAPSHOT →','saveMoney')}${back()}`}
-function render(){const app=$('#app');document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.mode===state.mode));$('#tabs').style.visibility=state.onboard?'visible':'hidden';let out='';if(!state.onboard&&['welcome','people','date','area','size','budget','onboardDone'].includes(state.route))out=onboarding(state.route);else if(state.route==='landing')out=landing();else if(state.route==='dreamHome')out=dreamHome();else if(dreamSteps.includes(state.route))out=standardDream(state.route);else if(state.route.startsWith('play:'))out=playScreen(state.route.split(':')[1]);else if(state.route.startsWith('mix:'))out=mixScreen(state.route.split(':')[1]);else if(state.route.startsWith('mixDetail:'))out=mixDetail(state.route.split(':')[1]);else if(state.route==='beforeHome')out=eventHome('before');else if(state.route==='afterHome')out=eventHome('after');else if(state.route.startsWith('event:'))out=eventScreen(state.route.split(':')[1]);else if(state.route==='planHome')out=planHome();else if(state.route==='planGuests')out=planGuests();else if(state.route==='planMoney')out=planMoney();else if(['planInvites','planVendors','planStuff','planGifts','planEvents','planHoneymoon','planWeddingDay'].includes(state.route))out=planModule(state.route);else out=state.onboard?landing():onboarding('welcome');app.innerHTML=out;bind();if(state.route==='planMoney')calcMoney();window.scrollTo(0,0)}
-function bind(){document.querySelectorAll('[data-mode]').forEach(x=>x.onclick=()=>switchMode(x.dataset.mode));document.querySelectorAll('[data-route]').forEach(x=>x.onclick=()=>go(x.dataset.route));document.querySelectorAll('[data-action]').forEach(x=>x.onclick=()=>act(x.dataset.action));document.querySelectorAll('[data-choice]').forEach(x=>x.onclick=()=>selectChoice(x.dataset.choice));const pb=$('#photoBox');if(pb)pb.onclick=()=>$('#photoInput').click();document.querySelectorAll('.money').forEach(x=>x.oninput=calcMoney)}
+
+
+function parseDateValue(v){
+ if(!v)return null;
+ if(/^\d{4}-\d{2}-\d{2}$/.test(v)){const [y,m,d]=v.split('-').map(Number);return new Date(y,m-1,d,12)}
+ const x=new Date(v);return isNaN(x)?null:x
+}
+function dateOnly(d){return d?d.toLocaleDateString(undefined,{month:'short',day:'numeric'}):''}
+function daysFromToday(d){if(!d)return null;const a=new Date();a.setHours(12,0,0,0);const b=new Date(d);b.setHours(12,0,0,0);return Math.ceil((b-a)/86400000)}
+function relativeDue(v,kind='due'){
+ const d=parseDateValue(v);if(!d)return '';
+ const n=daysFromToday(d);
+ if(kind==='recommended')return n<0?'Ready when you are 💚':`Best done by ${dateOnly(d)}`;
+ if(n<0)return `Past due · ${dateOnly(d)}`;
+ if(n===0)return `Today · ${dateOnly(d)}`;
+ if(n===1)return `Tomorrow · ${dateOnly(d)}`;
+ if(n<=30)return `in ${n} days · ${dateOnly(d)}`;
+ return `Due ${dateOnly(d)}`
+}
+function weddingDays(){if(!state.date||state.dateUnknown)return null;return daysFromToday(parseDateValue(state.date))}
+function inviteRecommendation(){if(!state.date||state.dateUnknown)return null;const d=parseDateValue(state.date);d.setDate(d.getDate()-56);return d}
+function completedPlanSteps(){
+ ensurePlan();let out=[];const labels={invites:['Choose / design','Order or prepare','Receive / proof','Address / fill out','Mail / send'],vendors:['Choose vendor type','Compare / choose','Contract signed','Deposit paid','Final balance handled'],giftsReceived:['Gift recorded','Thank-you needed','Thank-you sent'],giftsGiven:['Choose recipient','Choose / make gift','Ready to give','Given'],honeymoon:['Choose destination / staycation plan','Set dates','Set planning budget','Travel / lodging handled','Reservations handled','What’s left reviewed'],weddingDay:['Build timeline','Assign people & responsibilities','Confirm things to bring','Confirm transportation / setup','Create end-of-night plan']};
+ Object.entries(state.plan.progress||{}).forEach(([m,a])=>(a||[]).forEach((v,i)=>{if(v)out.push((labels[m]||[])[i]||`${m} step ${i+1}`)}));return out
+}
+function recentWins(){
+ const w=[];
+ if(state.guestEstimate)w.push(`Added a rough guest estimate of ${state.guestEstimate}`);
+ Object.entries(state.chosen||{}).forEach(([k,v])=>{if(v)w.push(`${(labels[k]?.[1]||k).replace(/<[^>]+>/g,'')}: ${v}`)});
+ ensureStuff();state.plan.stuffItems.filter(x=>x.status==='Complete'||x.method==='Already Handled').forEach(x=>w.push(`${x.name} — already handled`));
+ completedPlanSteps().forEach(x=>w.push(x));
+ if(!w.length)w.push('You started planning your wedding.');
+ return w
+}
+function whatsLeftItems(){
+ ensurePlan();ensureStuff();const a=[];
+ if(!state.guestEstimate)a.push({t:'Add a rough guest estimate',s:'Ready when you are 💚',r:'planGuests'});
+ if(!state.plan.choices.inviteMethod){const rec=inviteRecommendation();a.push({t:'Choose how you want to send invitations',s:rec?relativeDue(rec,'recommended'):'Ready when you are 💚',r:'planInvites'})}
+ state.plan.stuffItems.filter(x=>!['Complete','Skipped'].includes(x.status)&&x.method!=='Already Handled'&&x.method!=='Skip').forEach(x=>a.push({t:x.name,s:x.neededBy?relativeDue(x.neededBy):'Ready when you are 💚',r:'planStuff'}));
+ return a
+}
+function upcomingStuff(maxDays){
+ ensureStuff();return state.plan.stuffItems.map(x=>({x,d:parseDateValue(x.neededBy||x.delivery)})).filter(o=>o.d&&daysFromToday(o.d)>=0&&daysFromToday(o.d)<=maxDays&&o.x.status!=='Complete'&&o.x.method!=='Skip').sort((a,b)=>a.d-b.d)
+}
+function plannerHome(){
+ ensurePlan();ensureStuff();const n=weddingDays();const first=state.people.a||'there';const left=whatsLeftItems();const week=upcomingStuff(7);const month=upcomingStuff(30).filter(o=>daysFromToday(o.d)>7);const orders=state.plan.stuffItems.filter(x=>x.status==='Ordered'||(x.delivery&& !['Received / Acquired','Ready','Delivered / Set Up','Complete'].includes(x.status)));const wins=recentWins().slice(0,4);
+ const right=left.slice(0,3);
+ return `${title(`Hi, ${esc(first)} 💚`,n===null?'Your wedding is taking shape.':n<0?'You did it. 💚':`${n} days until your wedding`,'HOME')}
+ <div class=\"eyebrow\">RIGHT NOW</div>${right.length?right.map(x=>card(x.t,x.s,x.r)).join(''):'<div class=\"statusbar\">Nothing needs your attention right now.</div>'}
+ <div class=\"eyebrow\">THIS WEEK</div>${week.length?week.map(o=>card(o.x.name,relativeDue(o.d),'planStuff')).join(''):'<div class=\"statusbar\">Nothing yet.</div>'}
+ <div class=\"eyebrow\">THIS MONTH</div>${month.length?month.map(o=>card(o.x.name,relativeDue(o.d),'planStuff')).join(''):'<div class=\"statusbar\">Nothing yet.</div>'}
+ <div class=\"eyebrow\">MONEY COMING UP</div>${state.plan.money.upcoming?card('Upcoming payment',state.plan.money.upcoming,'planMoney'):'<div class=\"statusbar\">Nothing yet.</div>'}
+ <div class=\"eyebrow\">ORDERS TO WATCH</div>${orders.length?orders.slice(0,4).map(x=>card(x.name,x.delivery?`Expected ${x.delivery}`:'Ordered — delivery not entered','planStuff')).join(''):'<div class=\"statusbar\">Nothing yet.</div>'}
+ <div class=\"eyebrow\">RECENT WINS ✨</div>${wins.map(x=>`<div class=\"statusbar\">${esc(x)}</div>`).join('')}
+ ${card('WHAT’S LEFT →',left.length?`${left.length} thing${left.length===1?'':'s'} currently need attention.`:'Nothing active is waiting on you.','whatsLeft')}
+ ${card('ALREADY ACCOMPLISHED →',`${recentWins().length} win${recentWins().length===1?'':'s'} remembered here.`,'alreadyAccomplished')}
+ <div class=\"bottom-note\">We’ll hold the details so you can experience your wedding.</div>`
+}
+function whatsLeft(){const a=whatsLeftItems();return `${title('What’s Left','Only unresolved things that actually belong to your wedding. This list should get smaller as you decide and do.','HOME')}${a.length?a.map(x=>card(x.t,x.s,x.r)).join(''):'<div class=\"notice\">Nothing is waiting on you right now. 💚</div>'}<button class=\"secondary\" data-mode=\"home\">BACK TO HOME →</button>${back()}`}
+function alreadyAccomplished(){const w=recentWins();return `${title('Already Accomplished ✨','If you already handled it, it belongs here — not back on your task list.','HOME')}${w.map(x=>`<div class=\"card done-card\"><strong>✓ ${esc(x)}</strong><span>Done and remembered.</span></div>`).join('')}<button class=\"secondary\" data-mode=\"home\">BACK TO HOME →</button>${back()}`}
+function ensurePlan(){
+ state.plan=state.plan||{};
+ state.plan.money=state.plan.money||{planned:'',committed:'',paid:'',outstanding:'',upcoming:''};
+ state.plan.progress=state.plan.progress||{};
+ state.plan.choices=state.plan.choices||{};
+}
+function planNav(){return `${back()}<button class="secondary" data-route="planHome">PLAN HOME →</button>`}
+function progressCard(module,index,label){
+ ensurePlan();
+ const arr=state.plan.progress[module]||[];
+ const done=!!arr[index];
+ return `<button class="card ${done?'done-card':''}" data-plan-toggle="${module}:${index}"><strong>${done?'✓ ':''}${esc(label)}</strong><span class="step-state">${done?'DONE — tap to reopen':'Tap when this is handled'}</span></button>`;
+}
+function lifecycle(module,items){return items.map((x,i)=>progressCard(module,i,x)).join('')}
+function planHome(){
+ ensurePlan();
+ const g=state.guestEstimate?`${state.guestEstimate} guests — best guess saved`:'Start with a best guess when you’re ready.';
+ const chosen=Object.entries(state.chosen).filter(([,v])=>v).map(([k,v])=>`<span class="pill">${esc(v)}</span>`).join('');
+ return `${title('Ready to make some of it real? 💚','We’ll use everything you’ve already told us. You’ll only see the decisions and next steps that actually belong to your wedding.','PLAN')}
+ ${chosen?`<div class="card"><strong>Already coming with you from Dream</strong>${chosen}</div>`:''}
+ ${card('Guests',g,'planGuests')}
+ ${card('Invitations + Paper','Choose the method, then move through the real send lifecycle.','planInvites')}
+ ${card('Money','Planned, committed, paid, outstanding, and what’s still uncommitted.','planMoney')}
+ ${card('Vendors','Track the vendor lifecycle without putting vendor question lists here.','planVendors')}
+ ${card('Stuff + Orders','How you’re getting something changes what the planner asks next.','planStuff')}
+ ${card('Gifts','Track received gifts, thank-yous, and only gifts you choose to give.','planGifts')}
+ ${card('Events','See only the supporting celebrations that actually belong to your wedding.','planEvents')}
+ ${card('Honeymoon','Manage the honeymoon, mini-moon, or staycation you choose.','planHoneymoon')}
+ ${card('Wedding Day','Turn chosen Dream details into timeline, ownership, and logistics.','planWeddingDay')}`;
+}
+function planGuests(){
+ const saved=state.guestEstimate?`<div class="statusbar">Saved: about ${esc(state.guestEstimate)} guests. Plan Home now shows this number.</div>`:'';
+ return `${title('Guests','A best guess is enough right now. We’ll ask for precision only when something actually needs it.','PLAN')}
+ <label class="label">About how many people might be there?</label>
+ <input class="field" id="guestEstimate" inputmode="numeric" placeholder="Best guess" value="${esc(state.guestEstimate)}">
+ ${btn('SAVE GUEST ESTIMATE →','saveGuests')}${saved}
+ <button class="secondary" data-route="planHome">BACK TO PLAN HOME →</button>${back()}`;
+}
+function planInvites(){
+ ensurePlan();
+ const method=state.plan.choices.inviteMethod||'';
+ const opts=['Paper','Digital','Both'];
+ return `${title('Invitations + Paper','Paper or digital — the system follows what you choose.','PLAN')}
+ <div class="h2">How are you sending invitations?</div>
+ ${opts.map(x=>`<button class="choice ${method===x?'selected':''}" data-plan-choice="inviteMethod" data-plan-value="${x}">${x}${method===x?'<span class="tag">✓</span>':''}</button>`).join('')}
+ ${method?`<div class="statusbar">${esc(method)} selected. The next steps below now belong to your plan.</div>`:`<div class="notice">Choose a method first. No paper-only task should appear just because invitations exist.</div>`}
+ ${method?lifecycle('invites',method==='Digital'?['Choose / design','Set up recipient list','Proof / test','Send','Track responses']:['Choose / design','Order or prepare','Receive / proof','Address / fill out','Mail / send']):''}
+ ${planNav()}`;
+}
+function planMoney(){
+ ensurePlan();const m=state.plan.money;
+ return `${title('Money','Budget intelligence is built into the same wedding system — it is not a separate “budget wedding” edition.','PLAN')}
+ ${['planned','committed','paid','outstanding','upcoming'].map(k=>`<label class="label">${k[0].toUpperCase()+k.slice(1)}</label><input class="field money" data-money="${k}" inputmode="decimal" value="${esc(m[k]||'')}">`).join('')}
+ <div class="statusbar">Uncommitted: <span id="uncommitted">—</span></div>
+ ${btn('SAVE MONEY SNAPSHOT →','saveMoney')}
+ <button class="secondary" data-route="planHome">BACK TO PLAN HOME →</button>${back()}`;
+}
+function planVendors(){
+ ensurePlan();
+ return `${title('Vendors','Only the vendors your wedding actually needs. Questions to ask them live in the Guide.','PLAN')}
+ ${lifecycle('vendors',['Choose vendor type','Compare / choose','Contract signed','Deposit paid','Final balance handled'])}
+ <div class="notice">Vendor questions and comparison guidance live in Our Wedding Guide. The Planner keeps the progress here.</div>
+ ${planNav()}`;
+}
+
+function ensureStuff(){
+ ensurePlan();
+ state.plan.stuffItems=state.plan.stuffItems||[];
+ state.plan.activeStuffId=state.plan.activeStuffId||null;
+}
+function stuffItemById(id){
+ ensureStuff();
+ return state.plan.stuffItems.find(x=>x.id===id)||null;
+}
+function planStuff(){
+ ensureStuff();
+ const items=state.plan.stuffItems;
+ return `${title('Stuff + Orders','Keep every physical thing in one place — then let each item follow its own Buy / Hire / DIY / Borrow / Delegate path.','PLAN')}
+ <div class="row"><input class="field" id="newStuffName" placeholder="Add an item — e.g. centerpieces"><button class="secondary" id="addStuffItem">＋ ADD ITEM</button></div>
+ ${items.length
+   ? `<div class="h2">Our items</div>${items.map(x=>`
+      <button class="card ${x.status==='Complete'?'done-card':''}" data-stuff-open="${esc(x.id)}">
+        <strong>${esc(x.name)}</strong>
+        <span>${x.method?esc(x.method):'Choose how we’re handling it'}${x.status?` · ${esc(x.status)}`:''}</span>
+        ${x.storedAt?`<span>Stored at: ${esc(x.storedAt)}</span>`:''}
+      </button>`).join('')}`
+   : `<div class="notice">Nothing here yet. Add anything physical you may need to buy, make, borrow, rent, receive, store, transport, set up, or return.</div>`}
+ <button class="secondary" data-route="planHome">BACK TO PLAN HOME →</button>${back()}`;
+}
+function planStuffItem(){
+ ensureStuff();
+ const item=stuffItemById(state.plan.activeStuffId);
+ if(!item)return planStuff();
+ const methods=['Buy','Hire','DIY','Borrow','Delegate','Already Handled','Skip'];
+ const follow={
+  Buy:'Track price → order date → expected delivery → received → stored at → destination.',
+  Hire:'Track vendor → quote/contract → deposit → balance → delivery/setup.',
+  DIY:'Track materials → quantities → true cost → time → helpers → storage → transport/setup.',
+  Borrow:'Track source → pickup → storage → return responsibility.',
+  Delegate:'Track who owns it and what you still need to provide.',
+  'Already Handled':'Move it out of What’s Left. Keep only useful logistics.',
+  Skip:'Remove it from active planning.'
+ };
+ return `${title(esc(item.name),'This item gets its own path. Change it anytime.','STUFF + ORDERS')}
+ <div class="h2">How are we handling this item?</div>
+ ${methods.map(x=>`<button class="choice ${item.method===x?'selected':''}" data-stuff-method="${x}">${x}${item.method===x?'<span class="tag">✓</span>':''}</button>`).join('')}
+ ${item.method?`<div class="card"><strong>${esc(item.method)} path</strong><span>${esc(follow[item.method])}</span></div>`:''}
+ ${item.method && !['Skip','Already Handled'].includes(item.method)?`
+   <label class="label">Status</label>
+   <select class="field" id="stuffStatus">
+     ${['Not Started','Choosing','Ordered','Making','Received / Acquired','Ready','Delivered / Set Up','Returned','Complete'].map(x=>`<option${item.status===x?' selected':''}>${x}</option>`).join('')}
+   </select>
+   <label class="label">Quantity</label><input class="field" id="stuffQty" inputmode="numeric" value="${esc(item.qty||'')}" placeholder="Only when useful">
+   <label class="label">Cost</label><input class="field" id="stuffCost" inputmode="decimal" value="${esc(item.cost||'')}" placeholder="$">
+   <label class="label">Expected delivery / pickup</label><input class="field" id="stuffDelivery" value="${esc(item.delivery||'')}" placeholder="Date or note">
+   <label class="label">Needed by</label><input class="field" id="stuffNeeded" value="${esc(item.neededBy||'')}" placeholder="When it actually needs to be ready">
+   <label class="label">Stored at</label><input class="field" id="stuffStored" value="${esc(item.storedAt||'')}" placeholder="Where is it now?">
+   <label class="label">Who gets it there?</label><input class="field" id="stuffTransport" value="${esc(item.transport||'')}" placeholder="Person / vendor / us">
+   <button class="primary" id="saveStuffItem">SAVE THIS ITEM →</button>`:''}
+ <button class="secondary" data-route="planStuff">BACK TO STUFF + ORDERS →</button>${back()}`;
+}
+function addStuffItem(){
+ ensureStuff();
+ const input=$('#newStuffName');
+ const name=input?.value.trim();
+ if(!name)return;
+ const id='stuff_'+Date.now()+'_'+Math.random().toString(36).slice(2,7);
+ state.plan.stuffItems.push({id,name,method:'',status:'Not Started',qty:'',cost:'',delivery:'',neededBy:'',storedAt:'',transport:''});
+ state.plan.activeStuffId=id;
+ save();
+ go('planStuffItem');
+}
+function openStuffItem(id){
+ ensureStuff();
+ state.plan.activeStuffId=id;
+ save();
+ go('planStuffItem');
+}
+function setStuffMethod(method){
+ const item=stuffItemById(state.plan.activeStuffId);
+ if(!item)return;
+ item.method=method;
+ if(method==='Already Handled')item.status='Complete';
+ if(method==='Skip')item.status='Skipped';
+ save();
+ render();
+}
+function saveStuffItem(){
+ const item=stuffItemById(state.plan.activeStuffId);
+ if(!item)return;
+ item.status=$('#stuffStatus')?.value||item.status;
+ item.qty=$('#stuffQty')?.value.trim()||'';
+ item.cost=$('#stuffCost')?.value.trim()||'';
+ item.delivery=$('#stuffDelivery')?.value.trim()||'';
+ item.neededBy=$('#stuffNeeded')?.value.trim()||'';
+ item.storedAt=$('#stuffStored')?.value.trim()||'';
+ item.transport=$('#stuffTransport')?.value.trim()||'';
+ save();
+ go('planStuff');
+}
+function planGifts(){
+ ensurePlan();
+ return `${title('Gifts','Keep thank-yous easy and only track gifts you actually choose to give.','PLAN')}
+ <div class="h2">Gifts received</div>
+ ${lifecycle('giftsReceived',['Gift recorded','Thank-you needed','Thank-you sent'])}
+ <div class="h2">Gifts we choose to give</div>
+ ${lifecycle('giftsGiven',['Choose recipient','Choose / make gift','Ready to give','Given'])}
+ ${planNav()}`;
+}
+function planEvents(){
+ const all=[...beforeEvents,...afterEvents];
+ const active=all.map(([id,name])=>({id,name,e:state.events[id]})).filter(x=>x.e&&x.e.owner&&x.e.owner!=='Not interested');
+ return `${title('Events','Only supporting celebrations that actually belong to your wedding should create planning work.','PLAN')}
+ ${active.length?active.map(x=>`<button class="card" data-route="event:${esc(x.id)}"><strong>${esc(x.name)}</strong><span>${esc(x.e.owner)}${x.e.help?.length?` · Help with: ${esc(x.e.help.join(', '))}`:''}</span><span class="small">Tap to review or change this event.</span></button>`).join(''):`<div class="notice">Nothing from Before or After the Wedding has become an active planning event yet. That is a complete, valid state.</div>`}
+ ${planNav()}`;
+}
+function planHoneymoon(){
+ ensurePlan();
+ const known=['honeymoon','minimoon','staycation'].map(id=>state.events[id]?.owner||state.events[id]?.help?.length?id:null).filter(Boolean);
+ return `${title('Honeymoon','Manage the trip or staycation you choose — discovery belongs in Dream and the Guide.','PLAN')}
+ ${known.length?`<div class="statusbar">Dream already has honeymoon-related information. Plan does not ask you to invent it again.</div>`:''}
+ ${lifecycle('honeymoon',['Choose destination / staycation plan','Set dates','Set planning budget','Travel / lodging handled','Reservations handled','What’s left reviewed'])}
+ ${planNav()}`;
+}
+function planWeddingDay(){
+ ensurePlan();
+ const rows=[];
+ if(state.chosen.ceremonyLocation)rows.push(['Ceremony location',state.chosen.ceremonyLocation]);
+ if(state.dream.timeOfDay)rows.push(['Time of day',state.dream.timeOfDay]);
+ if(state.dream.ceremonyContents?.length)rows.push(['Ceremony elements',state.dream.ceremonyContents.join(', ')]);
+ return `${title('Wedding Day','Turn what you already chose into people, timing, things, and ownership.','PLAN')}
+ ${rows.length?`<div class="card"><strong>Already known from your wedding</strong>${rows.map(([a,b])=>`<div class="summary"><b>${esc(a)}</b><br>${esc(b)}</div>`).join('')}</div>`:''}
+ ${lifecycle('weddingDay',['Build timeline','Assign people & responsibilities','Confirm things to bring','Confirm transportation / setup','Create end-of-night plan'])}
+ ${planNav()}`;
+}
+function togglePlanStep(spec){
+ ensurePlan();
+ const [module,raw]=spec.split(':');const i=Number(raw);
+ state.plan.progress[module]=state.plan.progress[module]||[];
+ state.plan.progress[module][i]=!state.plan.progress[module][i];
+ save();render();
+}
+function selectPlanChoice(key,value){ensurePlan();state.plan.choices[key]=value;save();render()}
+function render(){const app=$('#app');document.querySelectorAll('.tab').forEach(t=>t.classList.toggle('active',t.dataset.mode===state.mode));$('#tabs').style.visibility=state.onboard?'visible':'hidden';let out='';if(!state.onboard&&['welcome','people','date','area','size','budget','onboardDone'].includes(state.route))out=onboarding(state.route);else if(state.route==='landing')out=landing();else if(state.route==='guideInfo')out=guideInfo();else if(state.route==='plannerHome')out=plannerHome();else if(state.route==='whatsLeft')out=whatsLeft();else if(state.route==='alreadyAccomplished')out=alreadyAccomplished();else if(state.route==='dreamHome')out=dreamHome();else if(dreamSteps.includes(state.route))out=standardDream(state.route);else if(state.route.startsWith('play:'))out=playScreen(state.route.split(':')[1]);else if(state.route.startsWith('mix:'))out=mixScreen(state.route.split(':')[1]);else if(state.route.startsWith('mixDetail:'))out=mixDetail(state.route.split(':')[1]);else if(state.route==='beforeHome')out=eventHome('before');else if(state.route==='afterHome')out=eventHome('after');else if(state.route.startsWith('event:'))out=eventScreen(state.route.split(':')[1]);else if(state.route==='planHome')out=planHome();else if(state.route==='planGuests')out=planGuests();else if(state.route==='planInvites')out=planInvites();else if(state.route==='planMoney')out=planMoney();else if(state.route==='planVendors')out=planVendors();else if(state.route==='planStuff')out=planStuff();else if(state.route==='planStuffItem')out=planStuffItem();else if(state.route==='planGifts')out=planGifts();else if(state.route==='planEvents')out=planEvents();else if(state.route==='planHoneymoon')out=planHoneymoon();else if(state.route==='planWeddingDay')out=planWeddingDay();else out=state.onboard?landing():onboarding('welcome');app.innerHTML=out;bind();if(state.route==='planMoney')calcMoney();window.scrollTo(0,0)}
+function bind(){document.querySelectorAll('[data-mode]').forEach(x=>x.onclick=()=>switchMode(x.dataset.mode));document.querySelectorAll('[data-route]').forEach(x=>x.onclick=()=>{const r=x.dataset.route;const m=r.startsWith('plan')?'plan':(r==='plannerHome'||r==='whatsLeft'||r==='alreadyAccomplished'?'home':null);go(r,{mode:m})});document.querySelectorAll('[data-action]').forEach(x=>x.onclick=()=>act(x.dataset.action));document.querySelectorAll('[data-choice]').forEach(x=>x.onclick=()=>selectChoice(x.dataset.choice));document.querySelectorAll('[data-plan-toggle]').forEach(x=>x.onclick=()=>togglePlanStep(x.dataset.planToggle));document.querySelectorAll('[data-plan-choice]').forEach(x=>x.onclick=()=>selectPlanChoice(x.dataset.planChoice,x.dataset.planValue));document.querySelectorAll('[data-stuff-open]').forEach(x=>x.onclick=()=>openStuffItem(x.dataset.stuffOpen));document.querySelectorAll('[data-stuff-method]').forEach(x=>x.onclick=()=>setStuffMethod(x.dataset.stuffMethod));const addStuff=$('#addStuffItem');if(addStuff)addStuff.onclick=addStuffItem;const saveStuff=$('#saveStuffItem');if(saveStuff)saveStuff.onclick=saveStuffItem;const al=$('#alabel'),bl=$('#blabel'),ac=$('#acustom'),bc=$('#bcustom');if(al&&ac)al.onchange=()=>ac.classList.toggle('hidden',al.value!=='Custom');if(bl&&bc)bl.onchange=()=>bc.classList.toggle('hidden',bl.value!=='Custom');const pb=$('#photoBox');if(pb)pb.onclick=()=>$('#photoInput').click();document.querySelectorAll('.money').forEach(x=>x.oninput=calcMoney)}
 function selectChoice(v){const r=state.route;if(r==='size'){state.size=v;save();render();return}if(r.startsWith('play:')){const k=r.split(':')[1],a=state.explore[k]||[];state.explore[k]=a.includes(v)?a.filter(x=>x!==v):[...a,v];save();render();return}if(r.startsWith('mix:')){const k=r.split(':')[1];state.mix[k]??={selected:[],index:0};let a=state.mix[k].selected;state.mix[k].selected=a.includes(v)?a.filter(x=>x!==v):[...a,v];save();render();return}if(r.startsWith('mixDetail:')){const k=r.split(':')[1],m=state.mix[k],item=m.selected[m.index],ek=`mix:${k}:${item}`,a=state.explore[ek]||[];state.explore[ek]=a.includes(v)?a.filter(x=>x!==v):[...a,v];save();render();return}if(r.startsWith('event:')){const id=r.split(':')[1];state.events[id]??={};if(id==='staycation'){let a=state.events[id].help||[];state.events[id].help=a.includes(v)?a.filter(x=>x!==v):[...a,v]}else{const ownerOpts=['We’re planning it','We’re planning it with someone','Someone else is planning it','We know we’re having it, but details are still fuzzy','We’re just thinking about it','Not interested'];if(ownerOpts.includes(v))state.events[id].owner=v;else{let a=state.events[id].help||[];state.events[id].help=a.includes(v)?a.filter(x=>x!==v):[...a,v]}}save();render();return}if(multiKeys.has(r)){let a=state.dream[r]||[];if(play(v)){go(`play:${r}`);return}state.dream[r]=a.includes(v)?a.filter(x=>x!==v):[...a,v];save();render();return}if(play(v)){go(`play:${r}`);return}if(v==='A mix of these'){state.dream[r]=v;state.mix[r]??={selected:[],index:0};save();go(`mix:${r}`);return}state.dream[r]=v;save();render()}
-function act(a){if(a==='back')return doBack();if(a==='nextPeople')return go('people');if(a==='savePeople'){state.people.a=$('#a').value.trim();state.people.b=$('#b').value.trim();state.people.alabel=$('#alabel').value;state.people.blabel=$('#blabel').value;save();return go('date')}if(a==='saveDate'){state.date=$('#date').value;state.dateUnknown=$('#dateUnknown').checked;state.dateIdea=$('#dateIdea').value.trim();save();return go('area')}if(a==='saveArea'){state.area=$('#area').value.trim();state.areaUnknown=$('#areaUnknown').checked;save();return go('size')}if(a==='saveSize')return go('budget');if(a==='saveBudget'){state.budget=$('#budget').value.trim();state.budgetUnknown=$('#budgetUnknown').checked;save();return go('onboardDone')}if(a==='finishOnboard'){state.onboard=true;state.mode='landing';state.route='landing';state.lastDream='dreamHome';state.lastPlan='planHome';state.history=[];save();return render()}if(a==='enterDream'){state.mode='dream';state.history=[];return go(state.lastDream||'dreamHome',{push:false,mode:'dream'})}if(a==='enterPlan'){state.mode='plan';state.history=[];return go(state.lastPlan||'planHome',{push:false,mode:'plan'})}if(a==='guidePlaceholder'){alert('Guide door demonstrated. The Wedding Guide is the next deliverable; it is intentionally not faked inside this prototype.');return}if(a.startsWith('consider:')){const k=a.split(':')[1],v=state.dream[k];state.considering[k]=state.considering[k]===v?'':v;if(state.considering[k])state.chosen[k]='';save();return render()}if(a.startsWith('choose:')){const k=a.split(':')[1],v=state.dream[k];state.chosen[k]=state.chosen[k]===v?'':v;if(state.chosen[k])state.considering[k]='';save();return render()}if(a.startsWith('advance:')){const k=a.split(':')[1];if(k==='celebration')return go('dreamHome');const i=dreamSteps.indexOf(k);return go(dreamSteps[i+1])}if(a.startsWith('playDone:'))return doBack();if(a.startsWith('mixStart:')){const k=a.split(':')[1];state.mix[k]??={selected:[],index:0};if(!state.mix[k].selected.length){alert('Choose at least one part of your mix first.');return}state.mix[k].index=0;save();return go(`mixDetail:${k}`)}if(a.startsWith('mixNext:')){const k=a.split(':')[1],m=state.mix[k];if(m.index<m.selected.length-1){m.index++;save();return render()}state.dream[k]='A mix of these';save();state.history=state.history.filter(h=>!h.route.startsWith('mixDetail:')&&!h.route.startsWith('mix:'));return go(k,{push:false,mode:'dream'})}if(a.startsWith('eventDone:')){const id=a.split(':')[1];save();return go(beforeEvents.some(x=>x[0]===id)?'beforeHome':'afterHome')}if(a==='saveGuests'){state.guestEstimate=$('#guestEstimate').value.trim();save();return render()}if(a==='saveMoney'){document.querySelectorAll('.money').forEach(x=>state.plan.money[x.dataset.money]=x.value.trim());save();return render()}}
+function act(a){if(a==='back')return doBack();if(a==='nextPeople')return go('people');if(a==='savePeople'){state.people.a=$('#a').value.trim();state.people.b=$('#b').value.trim();state.people.alabel=$('#alabel').value;state.people.blabel=$('#blabel').value;state.people.acustom=state.people.alabel==='Custom'?($('#acustom')?.value.trim()||''):'';state.people.bcustom=state.people.blabel==='Custom'?($('#bcustom')?.value.trim()||''):'';save();return go('date')}if(a==='saveDate'){state.date=$('#date').value;state.dateUnknown=$('#dateUnknown').checked;state.dateIdea=$('#dateIdea').value.trim();save();return go('area')}if(a==='saveArea'){state.area=$('#area').value.trim();state.areaUnknown=$('#areaUnknown').checked;save();return go('size')}if(a==='saveSize')return go('budget');if(a==='saveBudget'){state.budget=$('#budget').value.trim();state.budgetUnknown=$('#budgetUnknown').checked;save();return go('onboardDone')}if(a==='finishOnboard'){state.onboard=true;state.mode='landing';state.route='landing';state.lastDream='dreamHome';state.lastPlan='planHome';state.lastHome='plannerHome';state.history=[];save();return render()}if(a==='enterHome'){state.mode='home';state.history=[];return go('plannerHome',{push:false,mode:'home'})}if(a==='guideInfo')return go('guideInfo');if(a==='enterDream'){state.mode='dream';state.history=[];return go(state.lastDream||'dreamHome',{push:false,mode:'dream'})}if(a==='enterPlan'){state.mode='plan';state.history=[];return go(state.lastPlan||'planHome',{push:false,mode:'plan'})}if(a.startsWith('consider:')){const k=a.split(':')[1],v=state.dream[k];state.considering[k]=state.considering[k]===v?'':v;if(state.considering[k])state.chosen[k]='';save();return render()}if(a.startsWith('choose:')){const k=a.split(':')[1],v=state.dream[k];state.chosen[k]=state.chosen[k]===v?'':v;if(state.chosen[k])state.considering[k]='';save();return render()}if(a.startsWith('advance:')){const k=a.split(':')[1];if(k==='celebration')return go('dreamHome');const i=dreamSteps.indexOf(k);return go(dreamSteps[i+1])}if(a.startsWith('playDone:'))return doBack();if(a.startsWith('mixStart:')){const k=a.split(':')[1];state.mix[k]??={selected:[],index:0};if(!state.mix[k].selected.length){alert('Choose at least one part of your mix first.');return}state.mix[k].index=0;save();return go(`mixDetail:${k}`)}if(a.startsWith('mixNext:')){const k=a.split(':')[1],m=state.mix[k];if(m.index<m.selected.length-1){m.index++;save();return render()}state.dream[k]='A mix of these';save();state.history=state.history.filter(h=>!h.route.startsWith('mixDetail:')&&!h.route.startsWith('mix:'));return go(k,{push:false,mode:'dream'})}if(a.startsWith('eventDone:')){const id=a.split(':')[1];save();return go(beforeEvents.some(x=>x[0]===id)?'beforeHome':'afterHome')}if(a==='saveGuests'){state.guestEstimate=$('#guestEstimate').value.trim();save();return render()}if(a==='saveMoney'){document.querySelectorAll('.money').forEach(x=>state.plan.money[x.dataset.money]=x.value.trim());save();return render()}}
 function calcMoney(){const els=[...document.querySelectorAll('.money')];if(!els.length)return;const vals={};els.forEach(x=>vals[x.dataset.money]=Number((x.value||'').replace(/[^0-9.-]/g,''))||0);const base=Number((state.budget||'').replace(/[^0-9.-]/g,''))||0;const u=Math.max(0,base-vals.committed);const el=$('#uncommitted');if(el)el.textContent=base?u.toLocaleString(undefined,{style:'currency',currency:'USD'}):'Add a planning budget to calculate'}
 $('#photoInput').addEventListener('change',e=>{const f=e.target.files[0];if(!f)return;const r=new FileReader();r.onload=()=>{state.photo=r.result;save();render()};r.readAsDataURL(f)});
 if(state.onboard&&state.route==='welcome'){state.route='landing';state.mode='landing'}render();
